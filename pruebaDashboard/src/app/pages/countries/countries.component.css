@@ -1,0 +1,11 @@
+.container table{
+    background-color: aliceblue;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    overflow: auto;
+}
+.bq{
+    color: white;
+    background-color: rgb(32, 30, 30);
+    border-color: rgb(32, 30, 30);
+}

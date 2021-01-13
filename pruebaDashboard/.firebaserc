@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "pruebagt"
+  },
+  "targets": {
+    "pruebagt": {
+      "hosting": {
+        "pruebaDashboard": [
+          "pruebagt"
+        ]
+      }
+    }
+  }
+}
