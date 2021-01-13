@@ -8,7 +8,7 @@ import { Observable } from "rxjs/Observable";
 })
 export class CountryService {
   constructor(private http:HttpClient) { 
-    console.log("Servicio de ciudades");
+    // console.log("Servicio de ciudades");
   }
   getCountries(): Observable<any>{ //obtener datos de Api  Rest
     return this.http.get('https://restcountries-v1.p.rapidapi.com/all?rapidapi-key=cd47a0b8eemsh03aa7a5207d932ap1d4be3jsn25d0e6187907');

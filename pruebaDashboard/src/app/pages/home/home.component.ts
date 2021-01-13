@@ -30,9 +30,9 @@ export class HomeComponent implements OnInit {
  async ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;       //Obtiene el usuario
-      console.log(this.user);
+      // console.log(this.user);
       this.loggedIn = (user != null);
-      console.log(this.loggedIn);
+      // console.log(this.loggedIn);
       if(!this.loggedIn){
         // alert("No inicio sesión con google");
   

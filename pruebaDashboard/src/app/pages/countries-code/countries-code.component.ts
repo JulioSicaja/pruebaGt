@@ -17,7 +17,7 @@ export class CountriesCodeComponent implements OnInit {
     this.idCountry=this._route.snapshot.paramMap.get('id'); //Obtener codigo para Api Rest
     console.log(this.idCountry);
     this.dataCountry.getCountriesbyCode(this.idCountry).subscribe((data)=>{  //Obtener data del ApiRest
-      console.log(data);
+      // console.log(data);
       this.countriesData=data;
     });
   }
@@ -29,7 +29,7 @@ export class CountriesCodeComponent implements OnInit {
     // alert("Cambiando datos");
     this.ruta.navigate(['/registroCod',dataId]);  //Cargar nuevos datos
     this.dataCountry.getCountriesbyCode(dataId).subscribe((data)=>{
-      console.log(data);
+      // console.log(data);
       this.countriesData=data;
     });
   }
