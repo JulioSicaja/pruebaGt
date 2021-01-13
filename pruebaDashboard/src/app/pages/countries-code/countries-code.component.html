@@ -1,0 +1,32 @@
+<app-home></app-home>
+
+<div class="container my-4">
+    <button class="btn btn-outline-dark mb-2" (click)="regresar()">&larr; Regresar a datos</button>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">alpha3Code</th>
+                    <th scope="col">capital</th>
+                    <th scope="col">subregion</th>
+                    <th scope="col">population</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{ countriesData.name}}</th>
+                    <td>{{ countriesData.alpha3Code }}</td>
+                    <td>{{ countriesData.capital }}</td>
+                    <td>@{{ countriesData.subregion }}</td>
+                    <td>@{{ countriesData.population }}</td>
+                </tr>
+            </tbody>
+          </table>
+          <div class="borders">
+            <span class="text-white">Países que tiene frontera <b>{{ countriesData.name }}</b>:</span>
+            <button class="btn btn-info mx-2" *ngFor="let fron of countriesData.borders" (click)="regBord(fron)">{{ fron }}</button>
+          </div>
+          
+    </div>
+</div>

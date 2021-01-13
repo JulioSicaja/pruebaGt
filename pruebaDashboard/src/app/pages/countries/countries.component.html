@@ -1,0 +1,27 @@
+<app-home></app-home>
+
+<div class="container my-4">
+    <input type="text" class="sticky-top form-control my-2 bq" onkeyup="buscarRegistros(this)" placeholder="Búsqueda">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">alpha3Code</th>
+                    <th scope="col">capital</th>
+                    <th scope="col">subregion</th>
+                    <th scope="col">population</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let countrieData of countriesData" (click)="probando(countrieData.alpha3Code)">
+                    <th scope="row">{{ countrieData.name }}</th>
+                    <td>{{ countrieData.alpha3Code }}</td>
+                    <td>{{ countrieData.capital }}</td>
+                    <td>@{{ countrieData.subregion }}</td>
+                    <td>@{{ countrieData.population }}</td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
