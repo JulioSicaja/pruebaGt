@@ -17,7 +17,7 @@ import {AuthService} from './../auth/services/auth.service';
   providers: [AuthService]
 })
 export class InicioComponent implements OnInit {
-  public titulo: string;
+  // public titulo: string;
   user!: SocialUser;
   loggedIn!: boolean;
   users!: any;
@@ -28,8 +28,8 @@ export class InicioComponent implements OnInit {
   });
 
   constructor(private authSvc: AuthService,private router: Router,private authService: SocialAuthService) { 
-    this.titulo = "Hola componentess";
-    console.log(this.titulo); 
+    // this.titulo = "Hola componentess";
+    // console.log(this.titulo); 
   }
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
@@ -46,7 +46,7 @@ export class InicioComponent implements OnInit {
  singInEmail(){
     
     try {
-      console.log(this.registroForm.value);
+      // console.log(this.registroForm.value);
       const {email, password} = this.registroForm.value;
       this.authSvc.ingresar(email, password);
       this.authSvc.obtenerUsuario().then((resolve)=>{

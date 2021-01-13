@@ -15,7 +15,7 @@ export class CountriesCodeComponent implements OnInit {
 
   ngOnInit(): void {
     this.idCountry=this._route.snapshot.paramMap.get('id'); //Obtener codigo para Api Rest
-    console.log(this.idCountry);
+    // console.log(this.idCountry);
     this.dataCountry.getCountriesbyCode(this.idCountry).subscribe((data)=>{  //Obtener data del ApiRest
       // console.log(data);
       this.countriesData=data;
